@@ -1,14 +1,7 @@
-buildscript {
-    repositories {
-        gradlePluginPortal()
-    }
-    dependencies {
-        classpath "com.github.johnrengelman:shadow:${shadowJarVersion}"
-    }
+plugins {
+    id("application")
+    id("com.github.johnrengelman.shadow") version "${shadowJarVersion}"
 }
-
-apply plugin: 'application'
-apply plugin: 'com.github.johnrengelman.shadow'
 
 dependencies {
     implementation project(':java-project-commons')
