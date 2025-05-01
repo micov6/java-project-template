@@ -13,3 +13,9 @@
 # intellij
 **/.idea
 **/*.iml
+
+# eclipse
+**/.settings
+**/.project
+**/.factorypath
+**/.classpath
