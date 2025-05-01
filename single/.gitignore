@@ -5,6 +5,7 @@
 **/build
 **/.gradle
 !**/gradle/wrapper/gradle-wrapper.jar
+**/bin
 
 # maven
 **/target

@@ -1,20 +1,16 @@
-buildscript {
-    repositories {
-        gradlePluginPortal()
-    }
-    dependencies {
-        classpath "com.github.johnrengelman:shadow:${shadowJarVersion}"
-    }
+plugins {
+  id("java")
+  id("application")
+  id("com.github.johnrengelman.shadow") version "${shadowJarVersion}"
 }
 
-apply plugin: 'java'
-apply plugin: 'application'
-apply plugin: 'com.github.johnrengelman.shadow'
-
 group = 'com.template.javaproject'
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
 version = '1.0.0-SNAPSHOT'
+
+java {
+  sourceCompatibility = JavaVersion.VERSION_21
+  targetCompatibility = JavaVersion.VERSION_21
+}
 
 repositories() {
     mavenCentral()
@@ -40,6 +36,10 @@ dependencies {
         "org.assertj:assertj-core:${assertjVersion}",
         "org.mockito:mockito-core:${mockitoVersion}",
         "org.mockito:mockito-junit-jupiter:${mockitoVersion}"
+    )
+
+    testRuntimeOnly(
+        "org.junit.platform:junit-platform-launcher"
     )
 }
 
