@@ -1,15 +1,15 @@
 plugins {
-  id("java")
-  id("application")
-  id("com.github.johnrengelman.shadow") version "${shadowJarVersion}"
+    id("java")
+    id("application")
+    id("com.github.johnrengelman.shadow") version "${shadowJarVersion}"
 }
 
 group = 'com.template.javaproject'
 version = '1.0.0-SNAPSHOT'
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_21
-  targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 repositories() {
